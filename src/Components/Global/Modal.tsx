@@ -29,6 +29,12 @@ const Modal: React.FC<Props> = ({ children, title, closeModal }) => {
     animate: {
       y: 0,
       opacity: 1,
+      transition: {
+        type: "spring",
+        // damping: 20,
+        stiffness: 300,
+        // mass: 0.5,
+      },
     },
     exit: {
       y: 40,
@@ -63,7 +69,7 @@ const Modal: React.FC<Props> = ({ children, title, closeModal }) => {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="relative bg-light z-20 minmax-width mx-auto mt-16 rounded-xl p-6 shadow-xl"
+          className="relative bg-light z-20 minmax-width mx-auto mt-20 rounded-xl p-6 shadow-xl"
         >
           <div className="mt-4 pb-2">
             <h2 className="font-semibold text-xl">{title}</h2>

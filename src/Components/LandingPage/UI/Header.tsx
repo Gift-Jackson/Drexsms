@@ -43,7 +43,7 @@ const Header = () => {
           </div>
           <Link
             to="/login"
-            className="md:hidden flex-center-center h-[40px] w-[40px]"
+            className="md:hidden flex-center-center bg-secondary rounded-lg h-[40px] w-[40px]"
           >
             <span className="material-symbols-outlined">account_circle</span>
           </Link>
