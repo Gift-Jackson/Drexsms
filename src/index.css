@@ -1,15 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  * {
+    @apply text-maintext font-inter cursor-default outline-none;
+  }
+
+  body {
+    @apply bg-secondary min-h-screen;
+  }
+
+  .main {
+    @apply max-w-[90%] 2xl:max-w-[1280px] mx-auto;
+  }
+
+  .layout {
+    @apply max-w-[100%] md:max-w-[700px] mx-auto;
+  }
+
+  span,
+  a {
+    @apply text-inherit;
+  }
+
+  .flex-center-center {
+    @apply flex items-center justify-center
+  }
+
+  .flex-center-between {
+    @apply flex items-center justify-between
+  }
+
+  .flex-center {
+    @apply flex items-center
+  }
+
+  .text-sm {
+    @apply text-[14px]
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md text-sm flex-center-center gap-2 font-semibold outline-none
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:text-white hover:brightness-90 ring-0 outline-none
+  }
+
+  .input-field {
+    @apply px-4 h-12 bg-transparent border rounded-lg text-sm focus:ring-2 ring-primary focus:border-transparent
+  }
+  .message{
+    @apply p-4 bg-transparent border rounded-lg text-sm focus:ring-2 ring-primary focus:border-transparent 
+  }
+  .minmax-width{
+    width: min(90%, 480px);
+  }
+}
+
+.grid-boxes {
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(50px, 1fr));
+  gap: 1rem;
+  background-color: red;
+}
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
