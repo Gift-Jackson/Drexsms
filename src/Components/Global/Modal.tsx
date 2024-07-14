@@ -29,12 +29,6 @@ const Modal: React.FC<Props> = ({ children, title, closeModal }) => {
     animate: {
       y: 0,
       opacity: 1,
-      transition: {
-        type: "spring",
-        // damping: 20,
-        stiffness: 300,
-        // mass: 0.5,
-      },
     },
     exit: {
       y: 40,
