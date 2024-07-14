@@ -20,6 +20,9 @@
   .layout {
     @apply max-w-[100%] md:max-w-[700px] mx-auto;
   }
+  .form {
+    @apply max-w-[100%] md:max-w-[480px] mx-auto;
+  }
 
   span,
   a {
@@ -59,7 +62,10 @@
   .minmax-width{
     width: min(90%, 480px);
   }
+  
 }
+
+
 
 .grid-boxes {
   display: grid;

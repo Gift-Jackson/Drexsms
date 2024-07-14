@@ -5,6 +5,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Loader from "./Components/Global/Loader";
 import { Toaster } from "react-hot-toast";
+import Login from "./Components/Auth/Pages/Login";
+import Register from "./Components/Auth/Pages/Register";
 
 const Home = lazy(() => import("./Components/LandingPage/Pages/Home"));
 const About = lazy(() => import("./Components/LandingPage/Pages/About"));
@@ -26,6 +28,10 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contact />} />
           </Route>
+
+          <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
+          
           <Route path="*" element={<Notfound />} />
         </Routes>
       </Suspense>

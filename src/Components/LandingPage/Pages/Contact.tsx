@@ -6,9 +6,7 @@ import useValidate from "../../../Hooks/useValidate";
 
 const Contact: React.FC = () => {
   document.title = "Contacts - Drexsms";
-
   const { form, setForm, validate } = useValidate();
-
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
@@ -51,7 +49,7 @@ const Contact: React.FC = () => {
     <>
       <div className="main py-20">
         <div className="layout">
-          <div className="md:pt-10">
+          <div className="md:pt-10" data-aos="fade-right" data-aos-offset="500">
             <h2 className="text-3xl font-semibold">Contact Us</h2>
             <p className="text-subtext">
               Feel free to reach out to us - 24/7 support

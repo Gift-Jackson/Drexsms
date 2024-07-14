@@ -23,7 +23,7 @@ const Container: React.FC<Props> = ({ title, subtitle, items }) => {
             className="text-center md:max-w-[700px] max-w-full mx-auto"
           >
             <p className="capitalize font-semibold text-primary">{title}</p>
-            <h1 className="font-bold text-3xl md:text-4xl mt-6 font-poppins">
+            <h1 className="font-bold text-3xl md:text-4xl mt-6">
               {subtitle}
             </h1>
           </div>
@@ -39,7 +39,7 @@ const Container: React.FC<Props> = ({ title, subtitle, items }) => {
                   <span className="material-symbols-outlined">{item.icon}</span>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h2 className="font-bold font-poppins text-xl">
+                  <h2 className="font-bold text-xl">
                     {item.title}
                   </h2>
                   <p className="text-subtext text-sm md:text-base">

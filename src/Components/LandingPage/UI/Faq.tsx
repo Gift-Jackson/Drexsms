@@ -20,9 +20,9 @@ const Faq = () => {
 
           <div className="layout mt-20 flex flex-col gap-4">
             {faq.map((item) => (
-                <div
-                    data-aos="fade-right"
-     data-aos-offset="500"
+              <div
+                data-aos="fade-right"
+                data-aos-offset="300"
                 key={item.question}
                 className="collapse collapse-arrow border rounded-lg"
               >

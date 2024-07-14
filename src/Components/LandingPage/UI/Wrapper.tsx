@@ -24,7 +24,7 @@ const Wrapper = ({ title, subtitle, content, image, custom_style }: props) => {
                   <div data-aos="fade-up" data-aos-delay="500" className="flex flex-col gap-8 flex-1">
                       <div>
                           <p className="text-primary font-bold">{title}</p>
-                          <h1 className="font-bold text-3xl md:text-4xl mt-6 font-poppins">{subtitle}</h1>
+                          <h1 className="font-bold text-3xl md:text-4xl mt-6">{subtitle}</h1>
                           <p className="text-subtext text-sm md:text-base mt-6"> {content} </p>
                       </div>
                       <Link to="/register">

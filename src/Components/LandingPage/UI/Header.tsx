@@ -3,7 +3,6 @@ import { navLinks } from "../../../Constants/data";
 import Brand from "../../Global/Brand";
 import MobileNav from "./MobileNav";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -45,13 +44,13 @@ const Header = () => {
             to="/login"
             className="md:hidden flex-center-center bg-secondary rounded-lg h-[40px] w-[40px]"
           >
-            <span className="material-symbols-outlined">account_circle</span>
+            <span className="material-symbols-outlined text-subtext hover:text-primary">
+              account_circle
+            </span>
           </Link>
         </nav>
       </header>
-      <AnimatePresence>
-        {menu && <MobileNav closeMenu={() => setMenu((prev) => !prev)} />}
-      </AnimatePresence>
+      {menu && <MobileNav closeMenu={() => setMenu((prev) => !prev)} />}
     </>
   );
 };

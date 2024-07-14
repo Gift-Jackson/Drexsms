@@ -3,10 +3,10 @@ import { navLinks } from "../../../Constants/data";
 import Modal from "../../Global/Modal";
 
 interface Props {
-    closeMenu:()=>void
+  closeMenu: () => void;
 }
 
-const MobileNav: React.FC<Props> = ({closeMenu}) => {
+const MobileNav: React.FC<Props> = ({ closeMenu }) => {
   return (
     <>
       <Modal closeModal={closeMenu} title="Menu">
@@ -14,14 +14,17 @@ const MobileNav: React.FC<Props> = ({closeMenu}) => {
           <ul className="flex flex-col gap-2">
             {navLinks.map((item) => (
               <li key={item.label}>
-                    <NavLink to={item.path}
-                        onClick={closeMenu}
-                        className={({ isActive }) =>
-                            isActive ?
-                                "bg-secondary block p-2 rounded-lg pl-4 border text-primary text-base font-semibold" :
-                                "hover:bg-secondary block p-2 rounded-lg pl-4 text-sm"
-                        }
-                    > {item.label} </NavLink>
+                <NavLink
+                  to={item.path}
+                  onClick={closeMenu}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-secondary block p-2 rounded-lg pl-4 border text-primary text-base font-semibold"
+                      : "hover:bg-secondary block p-2 rounded-lg pl-4 text-sm"
+                  }
+                >
+                  {item.label}
+                </NavLink>
               </li>
             ))}
           </ul>

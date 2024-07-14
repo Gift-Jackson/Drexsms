@@ -30,14 +30,9 @@ const Footer = () => {
 
       <footer className="footer bg-primary text-light p-10">
         <aside className="">
-          {/* <div className="bg-light rounded-lg text-primary h-[40px] w-[40px] flex items-center justify-center ">
-            <span className="material-symbols-outlined font-semibold">
-              perm_phone_msg
-            </span>
-          </div> */}
                   <div className="bg-white rounded-lg p-1"><img src={logo} width={40} alt="Logo" /></div>
           <p className="text-light font-medium text-xl">Drexsms</p>
-          <p className="text-light">
+          <p className="text-light/80">
             Copyright © {new Date().getFullYear()} - All right reserved by
             Drexsms
           </p>
