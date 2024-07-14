@@ -4,6 +4,7 @@ import { useEffect, lazy, Suspense } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Loader from "./Components/Global/Loader";
+import { Toaster } from "react-hot-toast";
 
 const Home = lazy(() => import("./Components/LandingPage/Pages/Home"));
 const About = lazy(() => import("./Components/LandingPage/Pages/About"));
@@ -17,6 +18,7 @@ const App = () => {
 
   return (
     <>
+      <Toaster position="top-center" />
       <Suspense fallback={<Loader/>}>
         <Routes>
           <Route element={<Layout />}>

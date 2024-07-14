@@ -1,7 +1,50 @@
-const Contact = () => {
-     document.title = "Contacts - Drexsms"
+import axios from "axios";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import loader from "../../../assets/rolling-loader.svg";
+import useValidate from "../../../Hooks/useValidate";
+
+const Contact: React.FC = () => {
+  document.title = "Contacts - Drexsms";
+
+  const { form, setForm, validate } = useValidate();
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (validate()) {
+      setLoading(true);
+      axios
+        .post("https://submit-form.com/S46wYaPtp", {
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        })
+        .then((res) => {
+          console.log(res);
+          toast.success("Form submitted successfully!");
+        })
+        .catch((error) => {
+          toast.error("Something went wrong!", error.message);
+        })
+        .finally(() => {
+          setLoading(false);
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        });
+    }
   };
 
   return (
@@ -11,7 +54,7 @@ const Contact = () => {
           <div className="md:pt-10">
             <h2 className="text-3xl font-semibold">Contact Us</h2>
             <p className="text-subtext">
-              Feel free to reachout to us - 24/7 support
+              Feel free to reach out to us - 24/7 support
             </p>
           </div>
 
@@ -31,8 +74,9 @@ const Contact = () => {
                 id="name"
                 placeholder="Enter full name..."
                 className="input-field"
-                required
                 autoComplete="off"
+                onChange={handleChange}
+                value={form.name}
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -45,12 +89,13 @@ const Contact = () => {
                 id="email"
                 placeholder="Enter e-mail address..."
                 className="input-field"
-                required
                 autoComplete="off"
+                onChange={handleChange}
+                value={form.email}
               />
             </div>
             <div className="flex flex-col gap-1">
-              <label className="text-sm" htmlFor="email">
+              <label className="text-sm" htmlFor="message">
                 Message:
               </label>
               <textarea
@@ -59,12 +104,19 @@ const Contact = () => {
                 rows={4}
                 placeholder="Enter message"
                 className="message"
-                required
                 autoComplete="off"
+                onChange={handleChange}
+                value={form.message}
               ></textarea>
             </div>
             <button type="submit" className="btn btn-primary">
-              Submit
+              {loading ? (
+                <>
+                  <img src={loader} width={25} />
+                </>
+              ) : (
+                "Send Message"
+              )}
             </button>
           </form>
         </div>

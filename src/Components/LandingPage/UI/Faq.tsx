@@ -20,11 +20,13 @@ const Faq = () => {
 
           <div className="layout mt-20 flex flex-col gap-4">
             {faq.map((item) => (
-              <div
+                <div
+                    data-aos="fade-right"
+     data-aos-offset="500"
                 key={item.question}
                 className="collapse collapse-arrow border rounded-lg"
               >
-                <input type="radio" name="my-accordion-2" defaultChecked />
+                <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title font-medium">
                   {item.question}
                 </div>

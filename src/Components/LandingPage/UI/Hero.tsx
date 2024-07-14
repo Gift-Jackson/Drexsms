@@ -3,10 +3,13 @@ import globe from "../../../assets/globe.svg";
 const Hero = () => {
   return (
     <>
-      <div className="main flex items-center flex-col md:flex-row pt-[100px] gap-10">
-        <div className="flex-1">
+      <div className="main flex items-center flex-col md:flex-row pt-[120px] gap-10">
+              <div className="flex-1"
+                  data-aos="zoom-in"
+                  data-aos-delay="500"
+              >
           <div className="flex flex-col gap-4 text-center md:text-left">
-            <h1 className="font-bold text-3xl md:text-5xl font-poppins">
+            <h1 className="font-bold text-4xl md:text-5xl">
               Get your virtual <br />number up and running{" "}
               <span className="text-primary">in minutes</span>.🚀
             </h1>
