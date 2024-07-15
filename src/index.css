@@ -6,7 +6,7 @@
 
 @layer utilities {
   * {
-    @apply text-maintext font-inter cursor-default outline-none;
+    @apply text-maintext font-mont cursor-default outline-none;
   }
 
   body {
