@@ -40,6 +40,7 @@ const Contact: React.FC = () => {
             name: "",
             email: "",
             message: "",
+            password:""
           });
         });
     }

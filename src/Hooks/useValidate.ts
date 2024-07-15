@@ -6,6 +6,7 @@ const useValidate = () => {
     name: "",
     email: "",
     message: "",
+    password: "",
   });
 
   const validate = () => {
@@ -17,6 +18,12 @@ const useValidate = () => {
       return false;
     } else if (!form.message) {
       toast.error("Message is required!");
+      return false;
+    } else if (!form.password) {
+      toast.error("Password is required!");
+      return false;
+    } else if (form.password.length > 5) {
+      toast.error("Password should be at least more than 5 characters!");
       return false;
     }
     return true;
