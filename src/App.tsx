@@ -5,13 +5,16 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Loader from "./Components/Global/Loader";
 import { Toaster } from "react-hot-toast";
-import Login from "./Components/Auth/Pages/Login";
-import Register from "./Components/Auth/Pages/Register";
+// import Login from "./Components/Auth/Pages/Login";
+// import Register from "./Components/Auth/Pages/Register";
 
 const Home = lazy(() => import("./Components/LandingPage/Pages/Home"));
 const About = lazy(() => import("./Components/LandingPage/Pages/About"));
 const Contact = lazy(() => import("./Components/LandingPage/Pages/Contact"));
 const Notfound = lazy(() => import("./Components/Global/Notfound"));
+const Login = lazy(()=> import("./Components/Auth/Pages/Login"))
+const Register = lazy(()=> import("./Components/Auth/Pages/Register"))
+
 
 const App = () => {
   useEffect(() => {
