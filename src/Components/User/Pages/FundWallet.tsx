@@ -15,6 +15,10 @@ const FundWallet = () => {
 
     const f = new Intl.NumberFormat("en-US")
     const amountNumber = parseFloat(form.amount) || 0;
+
+    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+    }
   return (
       <>
           <Layout>
@@ -22,7 +26,7 @@ const FundWallet = () => {
                   <Heading title="Fund Wallet" />
 
                   <div className="mt-4">
-                      <form className="flex flex-col bg-white p-4 shadow rounded-xl gap-4">
+                      <form onSubmit={handleSubmit} className="flex flex-col bg-white p-4 shadow rounded-xl gap-4">
                           <InputField
                               label="Phone Number"
                               type="number"

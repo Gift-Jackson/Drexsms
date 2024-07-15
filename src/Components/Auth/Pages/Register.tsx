@@ -23,7 +23,7 @@ const Register = () => {
       id: "username",
       type: "text",
       label: "Username",
-      placeholder: "e.g Scorpion",
+      placeholder: "e.g Jackson",
       value: form.username,
       onChange: handleChange,
     },
