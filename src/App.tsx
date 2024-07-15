@@ -16,6 +16,7 @@ const Dashboard = lazy(()=> import("./Components/User/Pages/Dashboard"))
 const Purchase = lazy(() => import("./Components/User/Pages/Purchase"));
 const Messages = lazy(() => import("./Components/User/Pages/Messages"));
 const FundWallet = lazy(() => import("./Components/User/Pages/FundWallet"));
+const Numbers = lazy(() => import("./Components/User/Pages/Numbers"));
 
 const App = () => {
   useEffect(() => {
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/purchase" element={<Purchase/>} />
           <Route path="/messages" element={<Messages/>} />
           <Route path="/fund-wallet" element={<FundWallet/>} />
+          <Route path="/numbers" element={<Numbers/>} />
           
           <Route path="*" element={<Notfound />} />
         </Routes>
