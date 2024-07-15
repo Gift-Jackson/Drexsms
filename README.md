@@ -51,6 +51,7 @@ The project's structure is organized as follows:
 - **vite.config.ts**: Configuration for Vite.
 
 ## Usage
+    ## Usage
 
 To run the project locally, use the following command:
 
@@ -58,6 +59,32 @@ To run the project locally, use the following command:
 npm run dev
 ```
 
+<<<<<<< HEAD
+=======
+
+    ## Project Structure
+
+The project's structure is organized as follows:
+
+
+- **public/**: Contains static files like the favicon and the HTML template.
+- **src/**: Contains the main source code for the project.
+  - **assets/**: Contains images, icons, and other static assets.
+  - **components/**: Contains reusable React components.
+  - **hooks/**: Contains custom hooks used across the application.
+  - **pages/**: Contains individual page components.
+  - **App.tsx**: The root component of the application.
+  - **index.tsx**: The entry point for the React application.
+  - **main.tsx**: The main TypeScript file.
+- **.gitignore**: Specifies files to be ignored by Git.
+- **package.json**: Contains project dependencies and scripts.
+- **postcss.config.js**: Configuration for PostCSS.
+- **README.md**: The project's README file.
+- **tailwind.config.js**: Configuration for Tailwind CSS.
+- **tsconfig.json**: TypeScript configuration file.
+- **vite.config.ts**: Configuration for Vite.
+
+>>>>>>> 32f49436625e9b9abc77e7666a3eba141d7b3e30
 ## Available Scripts
 
 In the project directory, you can run:
