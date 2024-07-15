@@ -73,3 +73,21 @@ export const faq = [
   },
 ]
 
+export const links = [
+  {
+    name: "Overview",
+    icon: "dashboard",
+    path: "overview",
+  },
+  {
+    name: "Users",
+    icon: "person",
+    path: "users",
+  },
+  {
+    name: "Fund API",
+    icon: "account_balance_wallet",
+    path: "https://app.flutterwave.com/login",
+  },
+];
+

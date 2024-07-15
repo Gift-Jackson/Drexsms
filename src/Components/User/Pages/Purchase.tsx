@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Layout from "../Layout";
-import Heading from "../UI/Heading";
+import Heading from "../../Global/Heading";
 
 const Purchase = () => {
   const location = useLocation();

@@ -1,5 +1,5 @@
 import Layout from "../Layout"
-import Heading from "../UI/Heading"
+import Heading from "../../Global/Heading";
 
 const FundWallet = () => {
   return (

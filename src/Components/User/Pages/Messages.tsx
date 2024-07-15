@@ -1,7 +1,7 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import Layout from "../Layout";
-import Heading from "../UI/Heading";
+import Heading from "../../Global/Heading";
 
 const Messages = () => {
   const messages = [

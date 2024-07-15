@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "../Layout";
 import Card from "../UI/Card";
-import Heading from "../UI/Heading";
+import Heading from "../../Global/Heading";
 import Container from "../UI/Container";
 
 const Dashboard = () => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Layout from "../Layout";
-import Heading from "../UI/Heading";
+import Heading from "../../Global/Heading";
 import toast from "react-hot-toast";
 
 const Numbers = () => {
