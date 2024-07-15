@@ -51,7 +51,7 @@ const Login: React.FC = () => {
     }
   };
 
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -64,8 +64,10 @@ const Login: React.FC = () => {
       setTimeout(() => {
         setLoading(false);
         toast.success("This should be Login Successful...I guess!🤔");
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 2500);
       }, 2500);
-      navigate("/dashboard")
     }
   };
 

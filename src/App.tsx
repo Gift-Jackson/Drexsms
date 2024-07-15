@@ -13,7 +13,9 @@ const Notfound = lazy(() => import("./Components/Global/Notfound"));
 const Login = lazy(()=> import("./Components/Auth/Pages/Login"))
 const Register = lazy(()=> import("./Components/Auth/Pages/Register"))
 const Dashboard = lazy(()=> import("./Components/User/Pages/Dashboard"))
-
+const Purchase = lazy(() => import("./Components/User/Pages/Purchase"));
+const Messages = lazy(() => import("./Components/User/Pages/Messages"));
+const FundWallet = lazy(() => import("./Components/User/Pages/FundWallet"));
 
 const App = () => {
   useEffect(() => {
@@ -35,6 +37,9 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           
           <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/purchase" element={<Purchase/>} />
+          <Route path="/messages" element={<Messages/>} />
+          <Route path="/fund-wallet" element={<FundWallet/>} />
           
           <Route path="*" element={<Notfound />} />
         </Routes>

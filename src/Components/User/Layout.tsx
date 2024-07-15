@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './UI/Header'
 
 interface Props {
   children: React.ReactNode
@@ -7,9 +8,12 @@ interface Props {
 const Layout: React.FC<Props> = ({children}) => {
   return (
     <>
-      <div>
-        {children}
-    </div>
+    <Header/>
+      <div className='main'>
+        <div className='layout pt-[80px] md:pt-[100px]'>
+          {children}
+            </div>
+      </div>
     </>
   )
 }

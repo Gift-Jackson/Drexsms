@@ -76,6 +76,9 @@ const Register = () => {
       setTimeout(() => {
         setLoading(false);
         toast.success("This should be Registration Successful...I guess!🤔");
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 2500);
       }, 2500);
         navigate("/dashboard")
     }

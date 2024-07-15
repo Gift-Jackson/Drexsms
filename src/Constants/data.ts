@@ -72,3 +72,4 @@ export const faq = [
     answer: "YES, you have to be online so that you can receive your OTP swiftly on the site."
   },
 ]
+
