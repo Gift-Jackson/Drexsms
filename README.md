@@ -28,6 +28,15 @@ To get started with the project, follow these steps:
     npm install
     ```
 
+    ## Usage
+
+To run the project locally, use the following command:
+
+```sh
+npm run dev
+```
+
+
     ## Project Structure
 
 The project's structure is organized as follows:
@@ -115,9 +124,4 @@ Please follow the [Conventional Commits](https://www.conventionalcommits.org/en/
 Thank you for your contributions!
 
 
-## Usage
 
-To run the project locally, use the following command:
-
-```sh
-npm run dev
