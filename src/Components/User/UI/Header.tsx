@@ -15,9 +15,14 @@ const Header = () => {
       path: "/dashboard",
     },
     {
-      name: "Messages",
-      icon: "mail",
+      name: "Verification Messages",
+      icon: "chat",
       path: "/messages",
+    },
+    {
+      name: "Buy Social Account",
+      icon: "sentiment_satisfied",
+      path: "https://chat.whatsapp.com/HNt060kwacz9fWDMKM5Ddd",
     },
     {
       name: "Fund Wallet",
@@ -32,7 +37,7 @@ const Header = () => {
           <Brand />
 
           <div className="flex items-center gap-x-4 md:gap-x-8">
-            <ul className="hidden md:flex items-center gap-4">
+            <ul className="hidden lg:flex items-center gap-4">
               {links.map((link, index) => (
                 <li key={index}>
                   <NavLink
@@ -54,13 +59,13 @@ const Header = () => {
             <div className="flex items-center gap-x-4">
               <div
                 onClick={toggleDropDown}
-                className="flex-center-center md:hidden h-12 w-12 bg-secondary rounded-full"
+                className="flex-center-center lg:hidden h-12 w-12 bg-secondary rounded-full"
               >
                 <span className="material-symbols-rounded text-subtext">
                   dashboard
                 </span>
               </div>
-              <button className="hidden md:flex-center-center font-bold text-sm py-2 px-4 rounded-lg gap-1 bg-[crimson]/10 border border-[crimson] text-[crimson]">
+              <button className="hidden lg:flex-center-center font-bold text-sm py-2 px-4 rounded-lg gap-1 bg-[crimson]/10 border border-[crimson] text-[crimson]">
                 <span>Logout</span>
                 <span className="material-symbols-outlined text-base font-bold">
                   logout

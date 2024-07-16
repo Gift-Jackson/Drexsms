@@ -11,9 +11,14 @@ const links = [
     path: "/dashboard",
   },
   {
-    name: "Messages",
-    icon: "mail",
+    name: "Verification Messages",
+    icon: "chat",
     path: "/messages",
+  },
+  {
+    name: "Buy Social Account",
+    icon: "sentiment_satisfied",
+    path: "https://chat.whatsapp.com/HNt060kwacz9fWDMKM5Ddd",
   },
   {
     name: "Fund Wallet",
