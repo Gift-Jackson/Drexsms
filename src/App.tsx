@@ -46,9 +46,9 @@ const App = () => {
           <Route path="/fund-wallet" element={<FundWallet />} />
           <Route path="/numbers" element={<Numbers />} />
 
-          <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<Overview />} />
-            <Route path="users" element={<User />} />
+          <Route element={<AdminLayout />}>
+            <Route path="/admin" element={<Overview />} />
+            <Route path="/users" element={<User />} />
           </Route>
           <Route path="*" element={<Notfound />} />
         </Routes>

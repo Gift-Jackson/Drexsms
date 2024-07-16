@@ -77,12 +77,12 @@ export const links = [
   {
     name: "Overview",
     icon: "dashboard",
-    path: "",
+    path: "/admin",
   },
   {
     name: "Users",
     icon: "person",
-    path: "users",
+    path: "/users",
   },
   {
     name: "Fund API",
