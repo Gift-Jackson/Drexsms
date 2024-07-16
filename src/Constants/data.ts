@@ -77,7 +77,7 @@ export const links = [
   {
     name: "Overview",
     icon: "dashboard",
-    path: "overview",
+    path: "",
   },
   {
     name: "Users",
